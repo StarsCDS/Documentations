@@ -75,7 +75,7 @@ Here we provide a detailed explanation of the integration tests for a FastAPI AP
 
 
 ## Pytest Fixture
-```
+```python
 @pytest.fixture(scope="module")
 def knowledge_base_collection():
     uri = os.getenv("MONGO_URI")
@@ -137,7 +137,7 @@ This test case verifies the integration between FastAPI endpoint, file handling,
 2. ```test_upload_pdf_file```
 &nbsp;
 
-```
+```python
 def test_upload_pdf_file(knowledge_base_collection):
     with open("atten.pdf", "rb") as file:
         response = client.post("/upload", files={"file": file})
@@ -166,7 +166,7 @@ This test case verifies the integration between FastAPI endpoint, file handling,
 
 3. ```test_upload_ppt_file```
 &nbsp;
-```
+```python
 def test_upload_ppt_file(knowledge_base_collection):
     with open("cap.pptx", "rb") as file:
         response = client.post("/uploadppt", files={"file": file})
@@ -193,7 +193,7 @@ This test case verifies the integration between FastAPI endpoint, file handling,
 
 4. ```test_query```
 &nbsp;
-```
+```python
 def test_query():
     response = client.post("/query", json={"text": "What is the content of the document?"})
     assert response.status_code == 200
