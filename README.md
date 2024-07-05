@@ -1,5 +1,5 @@
 ## For Documentations
-- [pytest](pytest.md)
-- [Unittest](pytest__routine_unittest.md)
-- [Integrationtest](integration_testing_documentation.md)
+- [Pytest](pytest.md)
+- [Unit test](pytest__routine_unittest.md)
+- [Integration test](integration_testing_documentation.md)
   
